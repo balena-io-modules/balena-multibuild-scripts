@@ -1,0 +1,6 @@
+FROM balenalib/aarch64-alpine:3.10
+RUN ["cross-build-start"]
+RUN apk update && apk add bash jq
+RUN ["cross-build-end"]
+WORKDIR /usr/src
+COPY populate.sh remove.sh /usr/src/
