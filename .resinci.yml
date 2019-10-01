@@ -1,0 +1,15 @@
+---
+docker:
+  builds:
+    - path: src/build-secrets
+      dockerfile: Dockerfile-386
+      docker_repo: balena/386-balena-multibuild-scripts
+    - path: src/build-secrets
+      dockerfile: Dockerfile-amd64
+      docker_repo: balena/amd64-balena-multibuild-scripts
+    - path: src/build-secrets
+      dockerfile: Dockerfile-arm
+      docker_repo: balena/arm-balena-multibuild-scripts
+    - path: src/build-secrets
+      dockerfile: Dockerfile-arm64
+      docker_repo: balena/arm64-balena-multibuild-scripts

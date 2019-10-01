@@ -1,0 +1,4 @@
+FROM i386/alpine:3.10
+RUN apk update && apk add bash jq
+WORKDIR /usr/src
+COPY populate.sh remove.sh /usr/src/
